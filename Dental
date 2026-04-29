@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BCBS Dental Glossary</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f2ea;
+  margin: 0;
+}
+
+header {
+  background: #1a1612;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 15px auto;
+  display: block;
+  font-size: 16px;
+}
+
+.term {
+  background: white;
+  margin: 10px auto;
+  padding: 15px;
+  width: 90%;
+  border-left: 4px solid #c4963a;
+}
+
+.en {
+  font-weight: bold;
+}
+
+.es {
+  color: #c4963a;
+  font-style: italic;
+}
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Glosario Dental BCBS</h1>
+  <p>Inglés ↔ Español</p>
+</header>
+
+<input type="text" id="search" placeholder="Buscar término...">
+
+<div id="terms">
+
+<div class="term">
+  <div class="en">abrasion</div>
+  <div class="es">abrasión</div>
+  <div>Desgaste del esmalte causado por fricción.</div>
+</div>
+
+<div class="term">
+  <div class="en">abscess</div>
+  <div class="es">absceso</div>
+  <div>Infección con acumulación de pus.</div>
+</div>
+
+<div class="term">
+  <div class="en">abutment</div>
+  <div class="es">pilar</div>
+  <div>Soporte para un puente o implante.</div>
+</div>
+
+<div class="term">
+  <div class="en">amalgam</div>
+  <div class="es">amalgama</div>
+  <div>Material metálico para empastes.</div>
+</div>
+
+<div class="term">
+  <div class="en">anesthesia</div>
+  <div class="es">anestesia</div>
+  <div>Pérdida temporal de sensibilidad.</div>
+</div>
+
+<div class="term">
+  <div class="en">apicoectomy</div>
+  <div class="es">apicectomía</div>
+  <div>Cirugía en la punta de la raíz.</div>
+</div>
+
+<div class="term">
+  <div class="en">bridge</div>
+  <div class="es">puente dental</div>
+  <div>Reemplaza dientes faltantes.</div>
+</div>
+
+<div class="term">
+  <div class="en">cavity</div>
+  <div class="es">caries</div>
+  <div>Daño en el diente por bacterias.</div>
+</div>
+
+<div class="term">
+  <div class="en">crown</div>
+  <div class="es">corona</div>
+  <div>Restauración que cubre el diente.</div>
+</div>
+
+<div class="term">
+  <div class="en">dentin</div>
+  <div class="es">dentina</div>
+  <div>Capa interna del diente.</div>
+</div>
+
+<div class="term">
+  <div class="en">implant</div>
+  <div class="es">implante</div>
+  <div>Raíz artificial del diente.</div>
+</div>
+
+<div class="term">
+  <div class="en">inlay</div>
+  <div class="es">incrustación</div>
+  <div>Restauración interna del diente.</div>
+</div>
+
+<div class="term">
+  <div class="en">malocclusion</div>
+  <div class="es">maloclusión</div>
+  <div>Alineación incorrecta.</div>
+</div>
+
+<div class="term">
+  <div class="en">root canal</div>
+  <div class="es">tratamiento de conducto</div>
+  <div>Tratamiento del nervio del diente.</div>
+</div>
+
+<div class="term">
+  <div class="en">x-ray</div>
+  <div class="es">radiografía</div>
+  <div>Imagen para diagnóstico dental.</div>
+</div>
+
+</div>
+
+<script>
+const search = document.getElementById("search");
+const terms = document.querySelectorAll(".term");
+
+search.addEventListener("keyup", function() {
+  const value = this.value.toLowerCase();
+
+  terms.forEach(term => {
+    const text = term.innerText.toLowerCase();
+    term.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+</script>
+
+</body>
+</html>
